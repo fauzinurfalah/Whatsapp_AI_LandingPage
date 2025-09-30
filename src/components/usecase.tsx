@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 export default function UseCase() {
   return (
     <section className="pt-20 bg-white pb-20">
-      <div className=" text-center">
+      <div className="text-center">
         <div className="flex justify-center items-center">
           <h2 className="text-[43px] font-semibold mb-10 max-w-3xl text-black">
             Apa yang Kamu Bisa Lakukan dengan Training{" "}
@@ -23,8 +23,8 @@ export default function UseCase() {
           </div>
           <div className="w-1/2 pt-18 space-y-6 flex flex-col items-start">
             {/* Item 1 */}
-            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_rgb(52,211,153)] transition-colors duration-200 cursor-pointer group">
-              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-emerald-400 transition-colors">
+            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-[#738BF8] transition-colors">
                 <Check className="w-5 h-5 text-white" strokeWidth={3} />
               </div>
               <h2 className="font-semibold text-[26px] text-black leading-tight">
@@ -33,8 +33,8 @@ export default function UseCase() {
             </div>
 
             {/* Item 2 */}
-            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_rgb(52,211,153)] transition-colors duration-200 cursor-pointer group">
-              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-emerald-400 transition-colors">
+            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-[#738BF8]c transition-colors">
                 <Check className="w-5 h-5 text-white" strokeWidth={3} />
               </div>
               <h2 className="font-semibold text-[26px] text-black leading-tight">
@@ -43,8 +43,8 @@ export default function UseCase() {
             </div>
 
             {/* Item 3 */}
-            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_rgb(52,211,153)] transition-colors duration-200 cursor-pointer group">
-              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-emerald-400 transition-colors">
+            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-[#738BF8]c transition-colors">
                 <Check className="w-5 h-5 text-white" strokeWidth={3} />
               </div>
               <h2 className="font-semibold text-[26px] text-black leading-tight whitespace-nowrap">
@@ -53,8 +53,8 @@ export default function UseCase() {
             </div>
 
             {/* Item 4 */}
-            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_rgb(52,211,153)] transition-colors duration-200 cursor-pointer group">
-              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-emerald-400 transition-colors">
+            <div className="inline-flex items-center gap-1 px-1 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-6 h-6 flex items-center justify-center rounded bg-gray-700 group-hover:bg-[#738BF8]c transition-colors">
                 <Check className="w-5 h-5 text-white" strokeWidth={3} />
               </div>
               <h2 className="font-semibold text-[26px] text-black leading-tight whitespace-nowrap">
