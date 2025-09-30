@@ -119,9 +119,15 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden; 
+:root {
+  --font-poppins: "Poppins", sans-serif;
 }
 
+body {
+  font-family: var(--font-poppins);
+}
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
