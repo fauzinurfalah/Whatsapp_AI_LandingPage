@@ -72,7 +72,7 @@ const RegisterPage: NextPage = () => {
                 <div>
                     <button
                     type="submit"
-                    className="w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     >
                     Daftar
                     </button>
@@ -81,7 +81,7 @@ const RegisterPage: NextPage = () => {
 
             <p className="text-sm text-center text-gray-600 dark:text-gray-400">
                 Sudah punya akun?{' '}
-                <Link href="/login" className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+                <Link href="/login" className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
                     Masuk di sini
                 </Link>
             </p>
