@@ -5,60 +5,56 @@ import { CirclePlay } from "lucide-react"
 
 export default function HeroSection() {
     return (
-        <main>
-            <section id='beranda'>
-                <div className="pb-5 pt-12 md:pb-10 lg:pb-48 lg:pt-44">
-                    <div className="relative mx-auto flex max-w-7xl flex-col px-6 lg:block">
-                        <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left mt-10">
-                            <h1 className="text-4xl md:text-4xl font-bold text-gray-800 leading-tight  ">Chat Otomatis Dua Arah
-                                dengan <span className="text-blue-500">AI</span> untuk Nomor <span className="text-green-500">WhatsApp</span> Anda</h1>
-                            <p className="mt-8 max-w-2xl text-medium text-lg md:text-2xl">Setiap nomor punya AI sendiri. Simulasi </p>
-                            <p className='text-medium text-lg md:text-2xl'>& otomatis, lengkap dengan dashboard</p> <p className='text-medium text-lg md:text-2xl'>real-time selama 30 hari</p>
-                            <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row lg:justify-start">
-                                <Button
-                                    asChild
-                                    size="lg"
-                                    className="px-8 py-6 text-lg text-white bg-gradient-to-r from-green-500 to-blue-600 transition-transform duration-200 hover:scale-105 hover:from-green-400 hover:to-green-400 active:from-green-500 active:to-green-500"
-                                >
-                                    <Link href="#link">
-                                        <span className="text-nowrap text-2xl">Mulai Sekarang</span>
-                                    </Link>
+        <main className="overflow-x-hidden">
+            <section id='beranda' className="relative">
+                <div className="pb-80 pt-40 md:pb-48 lg:pb-56 lg:pt-44">
+                    <div className="relative mx-auto flex max-w-7xl flex-col px-6">
+
+                        <div className="mx-auto max-w-lg lg:ml-0 lg:w-1/2">
+                            <h1 className="text-4xl font-bold text-gray-800 leading-tight md:text-5xl">
+                                Chat Otomatis Dua Arah dengan <span className="text-blue-500">AI</span> untuk Nomor <span className="text-green-500">WhatsApp</span> Anda
+                            </h1>
+                            <p className="mt-8 max-w-2xl text-lg text-gray-600 md:text-xl">
+                                Setiap nomor punya AI sendiri. Simulasi & otomatis, lengkap dengan dashboard real-time selama 30 hari.
+                            </p>
+                            
+                            <div className="mt-10 flex flex-row flex-wrap items-center justify-center gap-4 lg:justify-start">
+                                <Button asChild size="lg" className="w-auto bg-gradient-to-r from-green-500 to-blue-600 px-8 py-6 text-lg text-white transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                                    <Link href="#link">Mulai Sekarang</Link>
                                 </Button>
-                                <Button
-                                    asChild
-                                    size="lg"
-                                    variant={'outline'}
-                                    className="px-8 py-6 text-lg border-2 border-blue-500 text-black hover:border-none hover:bg-sky-500 hover:text-white active:bg-blue-500 active:border-blue-500 transition-transform duration-200 hover:scale-105">
+                                <Button asChild size="lg" variant={'outline'} className="w-auto border-2 border-gray-400 px-8 py-6 text-lg text-gray-800 transition-transform duration-300 hover:scale-105 hover:bg-blue-500 hover:text-white hover:border-blue-500 hover:shadow-lg">
                                     <Link href="#link" className="flex items-center gap-2">
-                                        <span className="text-nowrap text-2xl">Coba Demo</span>
+                                        <span>Coba Demo</span>
                                         <CirclePlay className='h-5 w-5' />
                                     </Link>
                                 </Button>
                             </div>
-                            <div className="mt-6 flex flex-col items-center gap-6 text-center sm:flex-row sm:gap-6 lg:justify-start lg:text-left">
+
+                            <div className="mt-8 flex flex-row flex-nowrap items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
-                                    <img src="img/chart-square.png"/>
-                                    <p className='text-sm'>Dashboard Real-Time</p>
+                                    <img src="img/chart-square.png" alt="Dashboard Icon" className="h-5  w-5" />
+                                    <p className='text-xs font-medium text-gray-700'>Dashboard Real-time</p>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <img src="img/call-add.png" />
-                                    <p className='text-sm'>50 Nomor Max</p>
+                                    <img src="img/call-add.png" alt="Nomor Max Icon" className="h-5 w-5" />
+                                    <p className='text-xs font-medium text-gray-700'>50 Nomor Max</p>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <img src="img/calendar-tick.png" />
-                                    <p className='text-sm'>30 Hari Gratis</p>
+                                    <img src="img/calendar-tick.png" alt="Durasi Icon" className="h-5 w-5" />
+                                    <p className='text-xs font-medium text-gray-700'>Minimal Durasi 30 Hari</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="absolute right-0 bottom-0 -z-10 w-1/2 lg:w-[60%] xl:w-1/2 opacity-60">
+
+                <div className="absolute -bottom-20 left-1/2 -z-10 w-full -translate-x-1/2 lg:left-auto lg:right-0 lg:bottom-0 lg:w-[80%] lg:translate-x-0 xl:w-1/2">
                     <img
                         src="img/Ellipse 2.png"
                         alt="Background decoration"
-                        width={1000}
-                        height={1000}
-                        className="object-contain"
+                        width={1200}
+                        height={800}
+                        className="object-cover w-full h-auto opacity-40 lg:opacity-60"
                     />
                 </div>
             </section>
