@@ -142,7 +142,7 @@ export default function KeyFeatures() {
                     href="/"
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
-                    className="px-12 py-2 border-blue-400 hover:bg-blue-400 hover:text-white border-3  rounded-lg text-gray-900 text-xl inline-flex items-center font-semibold transition-colors duration-100"
+                    className="px-10 py-4 border-blue-400 hover:bg-blue-400 hover:text-white border-3  rounded-lg text-gray-900 text-xl inline-flex items-center font-semibold transition-colors duration-100"
                   >
                     Mulai Sekarang
                     <CirclePlay className="ml-2 w-7 h-7" />
