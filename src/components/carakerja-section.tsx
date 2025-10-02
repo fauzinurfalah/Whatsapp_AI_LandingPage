@@ -1,7 +1,20 @@
+'use client';
+
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
+const CaraKerjaSection: React.FC = () => {
+  const viewOptions = {
+    triggerOnce: false,
+    threshold: 0.8,
+  };
 
-const CaraKerjaSectionManual: React.FC = () => {
+  const { ref: ref1, inView: inView1 } = useInView(viewOptions);
+  const { ref: ref2, inView: inView2 } = useInView(viewOptions);
+  const { ref: ref3, inView: inView3 } = useInView(viewOptions);
+  const { ref: ref4, inView: inView4 } = useInView(viewOptions);
+  const { ref: ref5, inView: inView5 } = useInView(viewOptions);
+
   return (
     <section id="cara-kerja" className="bg-white py-20 md:py-28 overflow-x-hidden relative z-10">
       <div className="container mx-auto max-w-7xl px-4">
@@ -16,78 +29,101 @@ const CaraKerjaSectionManual: React.FC = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="flex items-center -space-x-5 sm:-space-x-5 md:-space-x-5">
-            
-            {/* --- Card 1: Daftarkan Nomor --- */}
-            <div className="transform transition-all duration-300 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 hover:rotate-0 z-0 rotate-2 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-30 sm:w-65 h-55 flex flex-col gap-4">
-              <div className="flex justify-between items-start ">
-                  <img src="img/telp.png" className="w-12 h-12" />
+          <div className="flex flex-col items-center space-y-0 relative h-[60rem] md:flex-row md:items-center md:space-y-0 md:-space-x-4 md:h-auto md:relative">
+            {/* --- Card 1 --- */}
+            <div
+              ref={ref1}
+              className={`transform transition-all duration-700 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 md:hover:rotate-0 z-0 md:rotate-2 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-full sm:w-64 h-52 flex flex-col gap-4 sticky top-0 md:static ${
+                inView1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
+              <div className="flex justify-between items-start">
+                <img src="img/telp.png" alt="Icon Telepon" className="w-12 h-12" />
                 <span className="text-xs font-bold px-3 py-1 rounded-md bg-blue-100 text-blue-500">
                   Step 1
                 </span>
               </div>
               <div className="mt-2">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Daftarkan Nomor</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Daftarkan Nomor</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">Kelola hingga 50 nomor WhatsApp.</p>
               </div>
             </div>
 
-            {/* --- Card 2: Aktifkan AI Persona --- */}
-            <div className="transform transition-all duration-300 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 hover:rotate-0 z-10 -rotate-2 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-30 sm:w-65 h-55 flex flex-col gap-4">
-              <div className="flex justify-between items-start ">
-                <img src="img/setting.png" className="w-12 h-12" />
+            {/* --- Card 2 --- */}
+            <div
+              ref={ref2}
+              className={`transform transition-all duration-700 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 md:hover:rotate-0 z-10 md:-rotate-2 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-full sm:w-64 h-52 flex flex-col gap-4 sticky top-12 md:static ${
+                inView2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
+              <div className="flex justify-between items-start">
+                <img src="img/setting.png" alt="Icon Pengaturan" className="w-12 h-12" />
                 <span className="text-xs font-bold px-3 py-1 rounded-md bg-blue-100 text-blue-500">
                   Step 2
                 </span>
               </div>
               <div className="mt-2">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Aktifkan AI Persona</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Aktifkan AI Persona</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">Setiap nomor punya AI dengan prompt khusus.</p>
               </div>
             </div>
 
-            {/* --- Card 3: Trigger Harian --- */}
-            <div className="transform transition-all duration-300 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 hover:rotate-0 z-20 rotate-1 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-30 sm:w-65 h-55 flex flex-col gap-4">
-              <div className="flex justify-between items-start ">
-                <img src="img/clocks.png" className="w-12 h-12" />
+            {/* --- Card 3 --- */}
+            <div
+              ref={ref3}
+              className={`transform transition-all duration-700 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 md:hover:rotate-0 z-20 md:rotate-1 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-full sm:w-64 h-52 flex flex-col gap-4 sticky top-24 md:static ${
+                inView3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
+              <div className="flex justify-between items-start">
+                <img src="img/clocks.png" alt="Icon Jam" className="w-12 h-12" />
                 <span className="text-xs font-bold px-3 py-1 rounded-md bg-blue-100 text-blue-500">
                   Step 3
                 </span>
               </div>
               <div className="mt-2">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Trigger Harian</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Trigger Harian</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">Sistem jalankan max 5 nomor per hari (interval acak ±60 menit).</p>
               </div>
             </div>
-            
-            {/* --- Card 4: AI Chat Otomatis --- */}
-            <div className="transform transition-all duration-300 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 hover:rotate-0 z-30 -rotate-1 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-30 sm:w-65 h-55 flex flex-col gap-4">
-              <div className="flex justify-between items-start ">
-               <img src="img/chat.png" className="w-12 h-12" />
+
+            {/* --- Card 4 --- */}
+            <div
+              ref={ref4}
+              className={`transform transition-all duration-700 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 md:hover:rotate-0 z-30 md:-rotate-1 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-full sm:w-64 h-52 flex flex-col gap-4 sticky top-36 md:static ${
+                inView4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
+              <div className="flex justify-between items-start">
+                <img src="img/chat.png" alt="Icon Chat" className="w-12 h-12" />
                 <span className="text-xs font-bold px-3 py-1 rounded-md bg-blue-100 text-blue-500">
                   Step 4
                 </span>
               </div>
               <div className="mt-2">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Chat Otomatis</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chat Otomatis</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">Percakapan 2 arah, 8–10 chat, max 10 kata, balasan &lt;1 menit.</p>
               </div>
             </div>
 
-            {/* --- Card 5: Pantau di Dashboard --- */}
-            <div className="transform transition-all duration-300 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 hover:rotate-0 z-40 rotate-2 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-30 sm:w-65 h-55 flex flex-col gap-4">
-              <div className="flex justify-between items-start ">
-                <img src="img/chartcarakerja.png" className="w-12 h-12" />
+            {/* --- Card 5 --- */}
+            <div
+              ref={ref5}
+              className={`transform transition-all duration-700 ease-in-out hover:z-50 hover:-translate-y-6 hover:scale-105 md:hover:rotate-0 z-40 md:rotate-2 flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-full sm:w-64 h-52 flex flex-col gap-4 sticky top-48 md:static ${
+                inView5 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
+              <div className="flex justify-between items-start">
+                <img src="img/chartcarakerja.png" alt="Icon Grafik" className="w-12 h-12" />
                 <span className="text-xs font-bold px-3 py-1 rounded-md bg-blue-100 text-blue-500">
                   Step 5
                 </span>
               </div>
               <div className="mt-2">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Pantau di Dashboard</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Pantau di Dashboard</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">Statistik 30 hari terakhir, status nomor sukses/progress.</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -95,4 +131,4 @@ const CaraKerjaSectionManual: React.FC = () => {
   );
 };
 
-export default CaraKerjaSectionManual;
+export default CaraKerjaSection;

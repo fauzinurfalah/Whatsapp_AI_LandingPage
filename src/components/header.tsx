@@ -78,7 +78,7 @@ export const Header = () => {
                             aria-label="home"
                             onClick={() => handleLinkClick('/')} 
                             className="flex items-center space-x-2 font-bold">
-                            <span className='text-blue-500'> AI </span> Training
+                            <span className='text-blue-500'>AI </span> Training
                         </Link>
 
                         <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-8">
@@ -119,8 +119,8 @@ export const Header = () => {
                         </div>
 
                         {/* Mobile Menu */}
-                        <div className="bg-background in-data-[state=active]:block absolute top-full right-0 mt-2 hidden w-60 border p-6 shadow-lg shadow-zinc-300/20 lg:hidden">
-                            <ul className="space-y-6 text-base">
+                        <div className="bg-background in-data-[state=active]:block absolute top-full right-0 mt-2 hidden w-35 rounded border p-4 shadow-lg shadow-zinc-300/20 lg:hidden">
+                            <ul className="space-y-4 text-base text-center">
                                 {menuItems.map((item, index) => (
                                     <li key={index}>
                                         <Link
