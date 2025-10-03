@@ -1,14 +1,14 @@
-import { BarChart3, Check, MessagesSquare, Settings, Info } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
 
 type FeatureItemProps = { title: string; desc: string };
 // Komponen reusable untuk fitur list
 function FeatureItem({ title, desc }: FeatureItemProps) {
   return (
-    <div className="inline-flex items-start  gap-3 px-3 py-3 rounded-lg hover:shadow-[-7px_2px_4px_0px_rgb(34,197,94)] transition-all duration-400 group">
-      <div className="w-8 h-8 flex items-center justify-center rounded-lg border-2 border-green-500 group-hover:bg-green-500 transition-all duration-400">
+    <div className="inline-flex items-start gap-3 px-3 py-3 rounded-lg hover:shadow-[-7px_2px_4px_0px_rgb(34,197,94)] transition-all duration-400 group">
+      <div className="w-6 h-6 md:lg:w-8 md:h-8 lg:w-8 lg:h-8 flex items-center justify-center rounded-lg border-2 border-green-500 group-hover:bg-green-500 transition-all duration-400">
         <Check
-          className="w-5 h-5 text-green-500 group-hover:text-white"
+          className="w-4 h-4 md:w-5 md:h-5 lg:w-5 lg:h-5 text-green-500 group-hover:text-white"
           strokeWidth={4}
         />
       </div>
@@ -16,7 +16,9 @@ function FeatureItem({ title, desc }: FeatureItemProps) {
         <h2 className="font-semibold text-[24px] text-black leading-tight">
           {title}
         </h2>
-        <p className="text-black text-[26px] font-medium">{desc}</p>
+        <p className="text-black text-[16px] md:text-2xl lg:text-[26px] font-medium">
+          {desc}
+        </p>
       </div>
     </div>
   );
@@ -45,27 +47,28 @@ export default function Pricing() {
 
   return (
     <section className="bg-white pt-8 h-screen">
-      <div className="text-center">
-        <div className="flex justify-center items-center mb-10">
-          <h2 className="text-[40px] font-semibold text-black max-w-[777px]">
-            Akses Penuh Ekosistem:Mulai{" "}
-            <span className="text-blue-500">Training </span>
+      <div className="">
+        <div className="flex justify-center text-center items-center mb-6 lg:mb-10 md:px-12 px-0 whitespace-normal">
+          <h2 className="text-[36px] md:text-[42px] lg:text-[40px] font-semibold text-black max-w-[777px]">
+            Akses Penuh Ekosistem:
+            <br className="hidden md:block lg:hidden" />
+            Mulai <span className="text-blue-500">Training </span>
             Hingga <span className="text-green-500">50 Nomor </span>
-            Sekaligus
+            Lainnya
           </h2>
         </div>
 
-        <div className="flex">
+        <div className="flex flex-col whitespace-pre lg:flex-row ">
           {/* left: fitur list */}
-          <div className="basis-[60%] pl-28 pr-10 pt-20 flex flex-col space-y-4">
+          <div className="basis-[60%] px-0 md:px-10 lg:px-10 lg:pl-28 lg:pr-10 pt-20 flex flex-col space-y-4">
             {features.map((item, index) => (
               <FeatureItem key={index} {...item} />
             ))}
           </div>
 
           {/* right: pricing card */}
-          <div className="basis-[40%] pl-8 pt-10">
-            <div className="border-2 w-[417px] h-[524px] bg-gradient-to-b from-[#B5C3FF] to-[#CFD8FF] rounded-3xl flex flex-col items-center">
+          <div className="basis-[40%] lg:pl-0 pt-20 flex justify-center lg:justify-start">
+            <div className="border-2 max-w-[417px] w-full h-[524px] bg-gradient-to-b from-[#B5C3FF] to-[#CFD8FF] rounded-3xl flex flex-col items-center">
               <div className="pt-10 flex flex-col items-center">
                 <div className="flex font-semibold py-3 px-3 text-[12px] text-white bg-gradient-to-r from-[#3D5DED] to-[#C800FF] border rounded-3xl gap-x-2">
                   <Image
@@ -90,9 +93,9 @@ export default function Pricing() {
                   </p>
                 </div>
 
-                <div className="mt-5 space-y-3">
+                <div className=" w-6/6 mt-5 space-y-3 justify-start">
                   {/* 1 */}
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center">
                     <div className="flex items-center text-xl gap-2">
                       <Image
                         src="/img/check-blue.png"
@@ -101,7 +104,7 @@ export default function Pricing() {
                         height={10}
                         className="w-8 h-8"
                       />
-                      <span>Scheduler Aman</span>
+                      <span className="text-lg">Scheduler Aman</span>
                     </div>
                   </div>
                   {/* 2 */}
@@ -114,7 +117,7 @@ export default function Pricing() {
                         height={10}
                         className="w-8 h-8"
                       />
-                      <span>AI Chat Kualitas Tinggi</span>
+                      <span className="text-lg">AI Chat Kualitas Tinggi</span>
                     </div>
                   </div>
                   {/* 3 */}
@@ -127,7 +130,7 @@ export default function Pricing() {
                         height={10}
                         className="w-8 h-8"
                       />
-                      <span>Dashboard Real-time</span>
+                      <span className="text-lg">Dashboard Real-time</span>
                     </div>
                   </div>
                   {/* 4 */}
@@ -140,25 +143,18 @@ export default function Pricing() {
                         height={10}
                         className="w-8 h-8"
                       />
-                      <span>Dapat custom Prompt AI</span>
+                      <span className="text-lg">Dapat custom Prompt AI</span>
                     </div>
                   </div>
                 </div>
 
                 {/* tombol */}
-                <div className="mt-4 flex gap-3 items-center">
-                  <button className="border-2 bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-blue-800">
+                <div className="mt-4 flex items-center">
+                  <button
+                    className="border-2 text-[25px] bg-blue-600 text-white font-semibold py-3 px-18 rounded-xl hover:bg-blue-800 transition-all duration-200 
+             pb-3 hover:pb-2"
+                  >
                     Mulai Sekarang
-                  </button>
-                  <button className="flex border-4 bg-[#F5F7FF] border-green-500 font-semibold py-2 px-4 rounded-xl space-x-1 items-center hover:bg-green-200 hover:border-green-200">
-                    Hubungi Kami
-                    <Image
-                      src="/img/call.png"
-                      alt="phone"
-                      width={20}
-                      height={20}
-                      className="w-6 h-6"
-                    />
                   </button>
                 </div>
               </div>
