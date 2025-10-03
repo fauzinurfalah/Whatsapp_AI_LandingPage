@@ -1,0 +1,69 @@
+import Image from "next/image";
+import { Check } from "lucide-react";
+
+export default function UseCase() {
+  return (
+    <section className="pt-20 bg-white pb-20">
+      <div className="text-center">
+        <div className="flex justify-center items-center">
+          <h2 className="lg:text-[43px] md:text-[40px] text-[34px] font-semibold mb-10 max-w-3xl text-black">
+            Apa yang Kamu Bisa Lakukan dengan Training{" "}
+            <span className="text-blue-400">AI</span>?
+          </h2>
+        </div>
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full lg:w-1/2">
+            <Image
+              src="/img/phone-AI.png"
+              alt="Phone Icon"
+              width={720}
+              height={600}
+              className="object-contain"
+            />
+          </div>
+          <div className="w-full lg:w-1/2 pt-6 lg:pt-18 space-y-6 flex flex-col items-center lg:items-start ">
+            {/* Item 1 */}
+            <div className="flex w-full max-w-[666] items-center gap-1 px-3 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center rounded-sm bg-gray-700 group-hover:bg-[#738BF8] transition-colors">
+                <Check className="w-5 h-5 text-white" strokeWidth={3} />
+              </div>
+              <h2 className="font-medium text-[16px] md:text-2xl lg:text-[26px] text-black leading-tight whitespace-pre">
+                Chatbot sebelum dipakai production
+              </h2>
+            </div>
+
+            {/* Item 2 */}
+            <div className="flex w-full max-w-[666] items-center gap-1 px-3 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center rounded-sm bg-gray-700 group-hover:bg-[#738BF8] transition-colors">
+                <Check className="w-5 h-5 text-white" strokeWidth={3} />
+              </div>
+              <h2 className="font-medium text-[16px] md:text-2xl lg:text-[26px] text-black leading-tight">
+                Simulasi campaign WhatsApp
+              </h2>
+            </div>
+
+            {/* Item 3 */}
+            <div className="flex w-full max-w-[666] items-center gap-1 px-3 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center rounded-sm bg-gray-700 group-hover:bg-[#738BF8] transition-colors">
+                <Check className="w-5 h-5 text-white" strokeWidth={3} />
+              </div>
+              <h2 className="font-medium text-[16px] md:text-2xl lg:text-[25px] text-black leading-tight whitespace-nowrap">
+                Stress test nomor untuk minimalisir risiko blokir
+              </h2>
+            </div>
+
+            {/* Item 4 */}
+            <div className="flex w-full max-w-[666] items-center gap-1 px-3 py-3 rounded-lg hover:shadow-[-1px_2px_4px_0px_#738BF8] transition-colors duration-200 cursor-pointer group">
+              <div className="w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center rounded-sm bg-gray-700 group-hover:bg-[#738BF8] transition-colors">
+                <Check className="w-5 h-5 text-white" strokeWidth={3} />
+              </div>
+              <h2 className="font-medium text-[16px] md:text-2xl lg:text-[26px] text-black leading-tight whitespace-nowrap">
+                Riset & pengembangan interaksi pelanggan
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
