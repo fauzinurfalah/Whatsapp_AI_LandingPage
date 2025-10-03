@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scrool-behavior="smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased overflow-x-hidden`}
       >
         {children}
       </body>
