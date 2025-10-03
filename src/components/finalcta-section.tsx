@@ -6,7 +6,7 @@ import { Phone } from 'lucide-react'
 export default function Features() {
     return (
         <>
-        <section id='solusi' className="relative py-24 md:py-40">
+        <section id='solusi' className="relative bg-[#F5F7FF] py-24 md:py-40">
             <div className="@container relative mx-auto max-w-5xl px-6">
                 <div className="text-center">
                     <h2 className="text-6xl font-semibold lg:text-5xl"><span className='text-blue-500'>Upgrade</span> Training Anda - Aktifkan <span className='bg-gradient-to-r from-blue-500 to-green-600 text-transparent bg-clip-text'>AI </span>Chat Ecosystem Hari Ini</h2>
